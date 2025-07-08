@@ -22,6 +22,7 @@ Openclasseroom : javscript : www3school, apprendre javascript,
 Todoliste : ajouter une tache, supprimer une tache, modifier une tache, afficher la liste des taches par jour. Node.js avec express. API,
 From scrach, sans ia
 # 👨‍🔬 PRESENTATION 🧑‍🔬
+![image](https://github.com/user-attachments/assets/2e5a25de-b1e7-4d0d-8abd-730299f17fb0)
 
 La todoliste AJVDEC vous permet d'ajouter des taches que vous pouvez faire dans la journée.
 
