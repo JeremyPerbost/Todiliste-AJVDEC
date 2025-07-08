@@ -13,7 +13,7 @@ From scrach, sans ia
 
 ## JAVASCRIPT :
 
-**JavaScript** est un langage de programmation qui permet de rendre un site web **dynamique**. Il permet de :
+**JavaScript** est un langage de programmation qui permet de rendre un site web **dynamique**. Il permet de manipuler le [DOM](#dom-):
 
 - **Modifier le HTML et le CSS** : Manipuler la structure de la page web et son style.
 - **Insérer/Supprimer des éléments du site** : Ajouter ou retirer des éléments à la volée sans recharger la page.
@@ -24,3 +24,31 @@ From scrach, sans ia
 - **Envoyer des requêtes asynchrones au serveur** : Utiliser AJAX pour charger des données sans recharger la page.
 - **Authentifier les utilisateurs avec des JSON Web Tokens (JWT)** : Gérer l'authentification et la sécurité dans les applications web.
 
+## NODE JS : 
+Node Js est un environnement d'execution [javascript](#javascript-) qui permet d'écrire et manipuler des programmes du coté serveur avec du [javascript](#javascript-).
+Node Js utilise le moteur V8 qui est utilisé par chrome.
+Node Js n'utilise qu'un seul thread pour l'execution mais opere de facon asynchrone nottament grace à la librairie libuv écris en C (Entrée sortie non bloquant).
+
+## DOM : 
+Le DOM est un modèle pour représenter l'HTML d'un site. Le DOM transforme une page statique en espace dynamique ce qui permet de modifier une page sans la recharger.
+
+## MIDDLEWARE : 
+Un middleware est une fonction qui s'exécute pendant le traitement des requêtes HTTP.
+Elles peuvent accéder à l'objet request (req) et a l'objet response (res)
+Objet request : toutes les infos de l'utilisateur ==> données formulaire, url ...
+Objet response : reponse http que l'application express enverra en retour a la partie cliente après une requete.
+
+## CALLBACK : 
+Permet ddes savoir quand une opération asynchrone est terminée.
+## FONCTION FLECHEE : 
+La fonction flechée permet d'écrire de manière plus courte les fonctions exemple :
+``function ajouter(a, b) {return a + b;}``
+avec la fonction flechée : 
+``const ajouter = (a, b) => a + b;``
+## EXPRESS 
+Express est un framework pour [NodeJS](#node-js-)
+Il simplifie énormément le processus de gestion des requêtes HTTP, des réponses, du routage, de la gestion des middleware 
+# TECHNOLOGIES UTILISEES 
+🔴
+Node Js : version 22.14.0
+NPM : version 10.9.2 

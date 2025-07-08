@@ -1,0 +1,22 @@
+{
+  "name": "todiliste-ajvdec",
+  "version": "1.0.0",
+  "description": "TO-do liste : \r Openclasseroom : javscript : www3school, apprendre javascript,",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremyPerbost/Todiliste-AJVDEC.git"
+  },
+  "author": "Jeremy Perbost",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeremyPerbost/Todiliste-AJVDEC/issues"
+  },
+  "homepage": "https://github.com/JeremyPerbost/Todiliste-AJVDEC#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
