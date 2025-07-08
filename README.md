@@ -1,4 +1,20 @@
 # Todiliste-AJVDEC
+## 📋 SOMMAIRE
+
+- [👨‍🔬 PRÉSENTATION](#-presentation-)
+- [🔑 INSTALLATION ET PRÉREQUIS](#-installation-et-prerequis-)
+  - [Système d'exploitation](#systeme-dexploitation)
+  - [Installation](#installation)
+- [📖 WIKI](#-wiki-)
+  - [FROM SCRATCH](#from-scratch-)
+  - [JAVASCRIPT](#javascript-)
+  - [NODE JS](#node-js-)
+  - [DOM](#dom-)
+  - [MIDDLEWARE](#middleware-)
+  - [CALLBACK](#callback-)
+  - [FONCTION FLECHEE](#fonction-flechee-)
+  - [EXPRESS](#express)
+- [🔴 TECHNOLOGIES UTILISEES](#-technologies-utilisees)
 
 TO-do liste : 
 Openclasseroom : javscript : www3school, apprendre javascript, 
@@ -10,9 +26,13 @@ From scrach, sans ia
 La todoliste AJVDEC vous permet d'ajouter des taches que vous pouvez faire dans la journée.
 
 🗑️​ : permet de supprimer toutes les taches
+
 ✏️​​ : modifie la tache en la renplacant par le texte dans la zone de texte tout en bas
+
 ❌​​ : supprime la tache selectionnée
+
 Le bouton "Charger la liste" permet d'afficher toute la liste
+
 Le bouton "Ajouter Tache" permet d'ajouter une tache en prenant le texte dans la zone de texte en bas
 
 # 🔑 INSTALLATION ET PREREQUIS🔑
