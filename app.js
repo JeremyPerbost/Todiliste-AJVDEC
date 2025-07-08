@@ -30,8 +30,14 @@ app.delete('/supprimer-tout', (req, res) => {
 });
 app.post('/ajouter', (req, res) => {
     const texte_area = req.body.texte_area; // Récupère le texte de la requête
-    liste.push(texte_area); // Ajoute le texte à la liste
+    liste.push(texte_area); // Ajoute un nouvel élément à la fin de la liste
     res.json(liste); // Renvoie la liste mise à jour en JSON
+});
+app.post('/modifier/:index', (req, res) => {
+    const index = parseInt(req.params.index, 10); 
+    const texte_area = req.body.texte_area;
+    liste[index] = texte_area; 
+    res.json(liste);
 });
 //FONCTION DE CALLBACK POUR TRAITER LES REQUETES HTTP
 //premier argument : port d'écoute

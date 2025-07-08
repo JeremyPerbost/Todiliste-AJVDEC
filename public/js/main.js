@@ -1,19 +1,18 @@
 function chargerListe() {
     fetch('/recuperer')//envoye d'une requete GET pour recuperer les taches
         .then(response => {
-            console.log(response); // Log the response object to the console
-            console.log(response.json);
+            //console.log(response);
+            //console.log(response.json);
             return response.json();//Convertit la réponse en JSON
         })
         .then(data => {
-            console.log(data);
+            //console.log(data);
             const liste = document.getElementById('liste');
             liste.innerHTML = '';//supprimer le contenu existant de la liste
             data.forEach((item, index) => {
                 creer_tache(item, index, liste);
             });
         })
-    .catch(error => console.error('Error fetching tasks:', error));
 }
 function Supprimer(index) {
     fetch('/supprimer/' + index, {
@@ -31,23 +30,39 @@ function Supprimer_tout() {
 }
 function Ajouter(){
     const texte_area = document.getElementById('text_area_tache');
-    fetch('/ajouter', {
+    fetch('/ajouter',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'//corps de la requete en JSON
         },
         body: JSON.stringify({ texte_area: texte_area.value })//envoye les données au serveur
     })
-    creer_tache(texte_area.value, liste.children.length, document.getElementById('liste'));
-
+    creer_tache(texte_area.value, 0 , document.getElementById('liste'));
+}
+function Modifier(index) {
+    const texte_area = document.getElementById('text_area_tache');
+    fetch('/modifier/' + index, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ texte_area: texte_area.value })
+    })
+    .then(() => chargerListe());
 }
 function creer_tache(item, index, liste) {
     const li = document.createElement('li');
     li.textContent = item;
-    const button = document.createElement('button');
-    button.textContent = '❌​​';
-    button.id = `T${index + 1}`;
-    button.onclick = () => Supprimer(index);
-    li.appendChild(button);
+    const boutton_croix = document.createElement('button');
+    const boutton_modifier = document.createElement('button');
+    boutton_modifier.textContent = '✏️​​';
+    boutton_croix.textContent = '❌​​';
+    boutton_modifier.onclick =()=>Modifier(index);
+    boutton_croix.onclick = () => Supprimer(index);
+    li.appendChild(boutton_croix);
+    li.appendChild(boutton_modifier);
     liste.appendChild(li);
 }
+
+//document fait reference a l'objet DOM
+document.addEventListener('DOMContentLoaded', chargerListe);

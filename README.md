@@ -5,6 +5,27 @@ Openclasseroom : javscript : www3school, apprendre javascript,
 
 Todoliste : ajouter une tache, supprimer une tache, modifier une tache, afficher la liste des taches par jour. Node.js avec express. API,
 From scrach, sans ia
+# 👨‍🔬 PRESENTATION 🧑‍🔬
+
+La todoliste AJVDEC vous permet d'ajouter des taches que vous pouvez faire dans la journée.
+
+🗑️​ : permet de supprimer toutes les taches
+✏️​​ : modifie la tache en la renplacant par le texte dans la zone de texte tout en bas
+❌​​ : supprime la tache selectionnée
+Le bouton "Charger la liste" permet d'afficher toute la liste
+Le bouton "Ajouter Tache" permet d'ajouter une tache en prenant le texte dans la zone de texte en bas
+
+# 🔑 INSTALLATION ET PREREQUIS🔑
+
+## SYSTEME D'EXPLOITATION
+Windows
+## INSTALLATION
+1- Installer Node.js depuis le site officiel : https://nodejs.org/
+2- Cloner ou télécharger le projet
+3- Ouvrir un terminal dans le dossier du projet
+4- Installer les dépendances : ``npm install``
+5- Lancer le serveur : ``node app.js``
+6- Ouvrir votre navigateur et aller sur : http://localhost:3000
 
 # 📖 WIKI 📖
 
