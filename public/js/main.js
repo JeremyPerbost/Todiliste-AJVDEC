@@ -30,17 +30,22 @@ function Supprimer_tout() {
 }
 function Ajouter(){
     const texte_area = document.getElementById('text_area_tache');
+    if(!verification_text_area(texte_area)) {return;}
     fetch('/ajouter',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'//corps de la requete en JSON
         },
         body: JSON.stringify({ texte_area: texte_area.value })//envoye les données au serveur
-    })
-    creer_tache(texte_area.value, 0 , document.getElementById('liste'));
+    }).then(() => {
+        chargerListe(); // Recharger la liste après ajout
+        document.getElementById('text_area_tache').value = '';
+    });
 }
 function Modifier(index) {
+    console.log('Tache '+index+' modifier');
     const texte_area = document.getElementById('text_area_tache');
+    if(!verification_text_area(texte_area)) {return;}
     fetch('/modifier/' + index, {
         method: 'POST',
         headers: {
@@ -62,7 +67,13 @@ function creer_tache(item, index, liste) {
     li.appendChild(boutton_croix);
     li.appendChild(boutton_modifier);
     liste.appendChild(li);
+    document.getElementById('text_area_tache').value=''; //vider le champ de texte après ajout}
 }
-
+function verification_text_area(texte_area){
+    if(texte_area.value === '') {
+        return false;
+    }
+    return true;
+}
 //document fait reference a l'objet DOM
 document.addEventListener('DOMContentLoaded', chargerListe);

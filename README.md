@@ -28,7 +28,7 @@ La todoliste AJVDEC vous permet d'ajouter des taches que vous pouvez faire dans 
 
 🗑️​ : permet de supprimer toutes les taches
 
-✏️​​ : modifie la tache en la renplacant par le texte dans la zone de texte tout en bas
+✏️​​ : modifie la tache en la remplacant par le texte dans la zone de texte tout en bas
 
 ❌​​ : supprime la tache selectionnée
 
